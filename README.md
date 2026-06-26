@@ -4,7 +4,7 @@ Aplicación web desarrollada como proyecto académico para fortalecer conocimien
 
 ## Descripción
 
-HydroCycle es un sistema web que permite gestionar la información de una empresa dedicada al mantenimiento de bicicletas. El proyecto integra una interfaz desarrollada con HTML, CSS y Bootstrap, junto con PHP y MySQL para el manejo de la información.
+HydroCycle es un sistema web que permite gestionar la información de una empresa dedicada al mantenimiento de manejo y ahorro de agua. El proyecto integra una interfaz desarrollada con HTML, CSS y Bootstrap, junto con PHP y MySQL para el manejo de la información.
 
 ## Funcionalidades
 
@@ -36,6 +36,12 @@ HydroCycle es un sistema web que permite gestionar la información de una empres
 - Optimización de la interfaz.
 - Mayor seguridad en las consultas SQL.
 
+### LINK
+
+link: http://hidrocycle.rf.gd/
+
 ## Autor
 
 Miguel Rodríguez
+
+
