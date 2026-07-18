@@ -4,6 +4,8 @@
 
 include("conexion.php");
 
+$conn = conectar();
+
 $nombre = $_POST['nombre'];
 $correo = $_POST['correo'];
 $telefono = $_POST['telefono'];
@@ -14,16 +16,13 @@ VALUES('$nombre', '$correo', '$telefono', '$direccion')";
 
 if(mysqli_query($conn, $sql)){
 
-    echo "
-    <script>
-        alert('Datos guardados correctamente');
-        window.location='contacto.html';
-    </script>
-    ";
+    header("Location: contacto.php?ok");
+    exit();
 
 } else {
 
-    echo "Error: " . mysqli_error($conn);
+    header("Location: contacto.php?error");
+    exit();
 
 }
 

@@ -2,6 +2,8 @@
 
 include("conexion.php");
 
+$conn = conectar();
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 
@@ -13,7 +15,12 @@ $resultado = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($resultado) > 0){
 
-    header("location: panel.php");
+   	session_start();
+    $_SESSION["admin"] = true;
+    $_SESSION["usuario"] = $username;
+
+    header("Location: admin/panel.php");
+    exit();
 
 }else{
 

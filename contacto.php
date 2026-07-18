@@ -56,30 +56,6 @@
 
     <!-- CONTENIDO -->
     <div class="content d-flex justify-content-center align-items-center">
-    
-    <?php
-
-        if(isset($_GET['ok'])){
-
-            echo "
-            <div class='alert alert-success'>
-                Datos guardados correctamente.
-            </div>
-            ";
-
-        }
-
-        if(isset($_GET['error'])){
-
-            echo "
-            <div class='alert alert-danger'>
-                Error al guardar los datos.
-            </div>
-            ";
-
-        }
-
-        ?>
 
         <div class="card shadow p-4" style="max-width: 500px; width: 100%;">
 
@@ -91,6 +67,23 @@
             
             
             
+		<?php
+        if(isset($_GET['ok'])){
+            echo "
+            <div class='alert alert-success'>
+                Datos guardados correctamente.
+            </div>
+            ";
+        }
+        if(isset($_GET['error'])){
+
+            echo "
+            <div class='alert alert-danger'>
+                Error al guardar los datos.
+            </div>
+            ";
+        }
+        ?>
 
             <form action="guardar_contacto.php" method="POST">
 

@@ -1,10 +1,10 @@
 <?php
 
-include("conexion.php");
+require_once("../../conexion.php");
 
 class compras {
 
-    public $con;
+    private $con;
 
     public function __construct() {
         $this->con = conectar();}
@@ -24,7 +24,7 @@ class compras {
     }
 
     public function find($id) {
-        $sql = "SELECT * FROM compras WHERE id = '$id'";
+		$sql = "SELECT * FROM compras WHERE id = '$id'";
         $res = mysqli_query($this->con, $sql);
         return mysqli_fetch_assoc($res);
     }
